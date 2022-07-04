@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_rounded_16_bottom"
+        android:backgroundTint="@color/background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/translateFromTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/contentOnSurface"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/swapLanguageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Русский" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/swapLanguageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/baseline_grid"
+            app:layout_constraintEnd_toStartOf="@id/translateToTextView"
+            app:layout_constraintStart_toEndOf="@id/translateFromTextView"
+            app:srcCompat="@drawable/ic_swap" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/translateToTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/contentOnSurface"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/swapLanguageButton"
+            tools:text="English" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/translateFromCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/baseline_grid_small"
+        app:cardCornerRadius="@dimen/baseline_grid"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/customToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/translateFromContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/baseline_grid"
+                android:layout_marginTop="@dimen/baseline_grid"
+                android:layout_marginBottom="@dimen/baseline_grid_tiny"
+                android:background="@null"
+                android:gravity="top|start"
+                android:maxLength="250"
+                android:textColor="@color/contentOnSurface"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/recordTextFromButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Тест" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/characterCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/clearButton"
+                app:layout_constraintEnd_toStartOf="@id/clearButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/clearButton"
+                tools:text="250/250" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:contentDescription="@string/button_clear"
+                android:enabled="false"
+                android:src="@drawable/ic_close"
+                app:borderWidth="0dp"
+                app:fabCustomSize="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/recordTextFromButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/recordTextFromButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:backgroundTint="@color/appPrimary"
+                android:contentDescription="@string/button_record_voice"
+                android:src="@drawable/ic_microphone"
+                app:borderWidth="0dp"
+                app:fabCustomSize="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/playFromButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/clearButton" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/playFromButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:contentDescription="@string/button_tts"
+                android:enabled="false"
+                android:src="@drawable/ic_sound"
+                app:borderWidth="0dp"
+                app:fabCustomSize="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/recordTextFromButton" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/progressAnimation"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@id/playFromButton"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loader_anim"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/translateToCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/baseline_grid_small"
+        app:cardBackgroundColor="@color/surfaceColored"
+        app:cardCornerRadius="@dimen/baseline_grid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/translateToContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/baseline_grid"
+                android:layout_marginTop="@dimen/baseline_grid"
+                android:layout_marginBottom="@dimen/baseline_grid_tiny"
+                android:background="@null"
+                android:gravity="top|start"
+                android:textColor="@color/contentOnColor"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/favoriteResultButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Test" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/copyResultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:contentDescription="@string/button_copy"
+                android:enabled="false"
+                android:src="@drawable/ic_content_copy"
+                app:borderWidth="0dp"
+                app:fabCustomSize="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/favoriteResultButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/favoriteResultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:contentDescription="@string/button_to_favorite"
+                android:enabled="false"
+                android:src="@drawable/ic_favorite"
+                app:borderWidth="0dp"
+                app:fabCustomSize="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/playResultButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/copyResultButton" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/playResultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/baseline_grid_small"
+                android:layout_marginBottom="@dimen/baseline_grid"
+                android:contentDescription="@string/button_tts"
+                android:enabled="false"
+                android:src="@drawable/ic_sound"
+                app:borderWidth="0dp"
+                app:fabCustomSize="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/favoriteResultButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

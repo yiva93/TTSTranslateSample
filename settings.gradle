@@ -1,0 +1,5 @@
+include ':resources'
+include ':domain'
+include ':data'
+include ':app'
+rootProject.name = "TTS Translate Sample"

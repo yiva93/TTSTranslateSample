@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ZeroView">
+        <attr name="zero_title" format="string"/>
+        <attr name="zero_description" format="string"/>
+        <attr name="zero_action" format="string"/>
+        <attr name="zero_title_color" format="reference"/>
+        <attr name="zero_description_color" format="reference"/>
+        <attr name="zero_action_color" format="reference"/>
+        <attr name="zero_action_text_color" format="reference"/>
+        <attr name="zero_background" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressView">
+        <attr name="ps_text" format="string"/>
+        <attr name="ps_text_color" format="reference"/>
+        <attr name="ps_progress_color" format="reference"/>
+        <attr name="ps_background" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="RipplePulseLayout">
+        <attr name="rippleColor" format="color" />
+        <attr name="rippleType" format="enum">
+            <enum name="fill" value="0" />
+            <enum name="stroke" value="1" />
+        </attr>
+        <attr name="startRadius" format="dimension" />
+        <attr name="endRadius" format="dimension" />
+        <attr name="duration" format="integer" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+</resources>

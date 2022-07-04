@@ -1,6 +1,15 @@
 # TTSTranslateSample
 Project to test various patterns, libraries, etc., including TTS and Voice recognition
 
+# Architecture and main libraries
+- Kotlin, MVVM, Coroutines
+- Room for DB
+- Retrofit2 + OkHttp3
+- [Cicerone](https://github.com/terrakok/Cicerone) for navigation
+- [FastAdapter](https://github.com/mikepenz/FastAdapter) for RecyclerView adapters
+- [Lottie](https://github.com/airbnb/lottie-android) for animations
+- Using ([LibreTranslate](https://libretranslate.de) as translation endpoint
+
 # License
 
     Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_8"
+    android:backgroundTint="@color/background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDialogHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/contentOnSurface"
+            android:textAlignment="center"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Header"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/contentOnSurface"
+            android:textAlignment="center"
+            tools:text="Message"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonDialogFirstAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_rounded_4"
+            android:backgroundTint="@color/appPrimary"
+            android:gravity="center"
+            android:textColor="@color/contentOnColor"
+            android:textSize="14sp"
+            android:includeFontPadding="false"
+            tools:text="First"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonDialogSecondAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_rounded_4"
+            android:backgroundTint="@color/background"
+            android:gravity="center"
+            android:textColor="@color/contentOnSurface"
+            android:textSize="14sp"
+            android:includeFontPadding="false"
+            tools:text="Second"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonDialogThirdAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_rounded_4"
+            android:backgroundTint="@color/background"
+            android:gravity="center"
+            android:textColor="@color/contentOnSurface"
+            android:textSize="14sp"
+            android:includeFontPadding="false"
+            tools:text="Third"/>
+
+    </LinearLayout>
+
+</ScrollView>

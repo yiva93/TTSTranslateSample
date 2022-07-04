@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zerobranch.layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:draggedItem="@id/itemContainer"
+    app:rightItem="@id/swipeContainer"
+    tools:background="@color/surface">
+
+    <FrameLayout
+        android:id="@+id/backgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:paddingStart="@dimen/baseline_grid_24"
+        android:paddingEnd="@dimen/baseline_grid_tiny">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/bg_rounded_24_right"
+            android:padding="@dimen/baseline_grid"
+            android:scaleType="centerInside"
+            app:backgroundTint="@color/appRed"
+            app:tint="?attr/colorOnPrimary"
+            app:useCompatPadding="false"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:paddingEnd="@dimen/baseline_grid_tiny">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/reportRemoveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/bg_rounded_24_right"
+            android:padding="@dimen/baseline_grid"
+            android:scaleType="centerInside"
+            app:backgroundTint="@color/appRed"
+            app:srcCompat="@drawable/ic_remove"
+            app:tint="?attr/colorOnPrimary"
+            app:useCompatPadding="false"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/itemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_24"
+            android:backgroundTint="@color/background"
+            android:padding="@dimen/baseline_grid"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrowImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_right_bottom"
+                tools:text="RU" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textFrom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/baseline_grid_tiny"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/arrowImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem/random" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/baseline_grid_tiny"
+                android:layout_marginTop="@dimen/baseline_grid_tiny"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/arrowImageView"
+                app:layout_constraintTop_toBottomOf="@id/textFrom"
+                tools:text="@tools:sample/lorem/random" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</com.zerobranch.layout.SwipeLayout>

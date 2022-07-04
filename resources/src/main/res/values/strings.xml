@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">TTS Translate Sample</string>
+
+    <!-- Common system messages -->
+    <string name="double_back_to_exit">Нажмите еще раз для выхода</string>
+    <string name="please_wait">Пожалуйста, подождите…</string>
+    <string name="security_error">Отсутствуют необходимые разрешения</string>
+    <string name="unknown_error">Произошла неизвестная ошибка</string>
+    <string name="server_not_available_error">Сервер временно недоступен</string>
+    <string name="network_error">Отсутствует подключение к сети</string>
+    <string name="not_found_error">Запись не найдена</string>
+    <string name="forbidden_error">Данное действие недоступно</string>
+    <string name="unauthorized_error">Необходимо авторизоваться</string>
+    <string name="internal_server_error">Ошибка на сервере</string>
+    <string name="bad_request_error">Некорректный запрос</string>
+    <string name="message_server_unavailable">Сервер недоступен. Попробуйте запустить приложение позже.</string>
+    <string name="message_technical_works">Извините, в данный момент приложение недоступно. На сервере ведутся технические работы. Попробуйте запустить приложение позже.</string>
+    <string name="message_update_available">Доступно обновление приложения. Рекомендуется установить обновление.</string>
+    <string name="message_update_required">Данная версия приложения устарела. Необходимо установить обновление.</string>
+    <string name="close_app">Закрыть приложение</string>
+    <string name="open_google_play">Перейти в Google Play</string>
+    <string name="continue_without_updating">Продолжить без обновления</string>
+    <string name="btn_ok">Ок</string>
+    <string name="btn_back">Назад</string>
+    <string name="write_on_email">Написать на почту</string>
+    <string name="open_folder">Открыть папку</string>
+    <string name="open_file">Открыть файл</string>
+    <string name="share">Поделиться</string>
+    <string name="cancel">Отмена</string>
+    <string name="start">Запустить</string>
+    <string name="settings_btn">Настроить</string>
+
+    <!-- App strings section -->
+    <string name="selector_tab_translation">Перевод</string>
+    <string name="selector_tab_favorites">Избранное</string>
+    <string name="selector_tab_history">История</string>
+    <string name="screen_in_develop">В разработке</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_english">Английский</string>
+    <string name="button_clear">Очистить</string>
+    <string name="button_record_voice">Записать</string>
+    <string name="button_tts">Воспроизвести</string>
+    <string name="button_copy">Копировать</string>
+    <string name="button_to_favorite">В избранное</string>
+
+    <string name="translation_error">Ошибка перевода, попробуйте еще раз</string>
+    <string name="please_say_something">Говорите…</string>
+    <string name="press_to_speak">Нажмите для распознания</string>
+    <string name="recognizer_no_match">Речь не распознана, повторите попытку</string>
+    <string name="recognizer_client_error">Ошибка сервиса распознавания речи</string>
+    <string name="recognizer_server_error">Ошибка сети, повторите попытку</string>
+    <string name="dialog_voice_recognition_not_available_message">Возможность распознавания речи недоступна. Необходимо запустить Google Services.</string>
+    <string name="dialog_voice_recognition_not_enabled_message">Не удалось активировать функцию распознавания речи. Включите возможность голосового ввода в Настройках.</string>
+    <string name="google_search_package_name">com.google.android.googlequicksearchbox</string>
+    <string name="market_uri">market://details?id=%s</string>
+    <string name="play_store_uri">http://play.google.com/store/apps/details?id=%s</string>
+    <string name="voice_input_service_error">Не удалось открыть настройки распознавания речи</string>
+    <string name="record_audio_permission_request">Необходимо предоставить доступ к записи звука</string>
+    <string name="copy_success">Скопировано!</string>
+    <string name="favorites_empty">Список избранного пуст</string>
+    <string name="character_count_format" formatted="true">%d/%d</string>
+</resources>

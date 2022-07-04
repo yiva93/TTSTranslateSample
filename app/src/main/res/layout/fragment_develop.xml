@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <ScrollView
+        android:id="@+id/innerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="32dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewPlaceholder"
+                android:layout_width="75dp"
+                android:layout_height="102dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="96dp"
+                android:adjustViewBounds="true"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/baseline_grid_big"
+                android:layout_marginTop="@dimen/baseline_grid"
+                android:gravity="center"
+                android:text="@string/screen_in_develop"
+                android:textColor="@color/contentOnSurface"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/baseline_grid_big"
+                android:layout_marginTop="@dimen/baseline_grid_big"
+                android:background="@drawable/bg_rounded"
+                android:backgroundTint="@color/contentOnBackground"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="@string/btn_back"
+                android:textColor="@color/contentOnColor"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="32dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

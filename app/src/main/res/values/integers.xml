@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="app_exit_duration">2500</integer>
+
+    <integer name="logo_animate_duration">1000</integer>
+    <integer name="default_animation_duration">200</integer>
+    <integer name="preload_item_position">10</integer>
+</resources>

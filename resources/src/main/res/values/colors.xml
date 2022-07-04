@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appPrimary">#3F51B5</color>
+    <color name="appPrimaryVariant">#002984</color>
+    <color name="appSecondary">#3F51B5</color>
+    <color name="appSecondaryVariant">#002984</color>
+
+    <color name="appRed">#D73B3B</color>
+    <color name="appPrimaryA50">#803F51B5</color>
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F5F5F6</color>
+    <color name="surfaceColored">#7b88d1</color>
+    <color name="error">#A30000</color>
+    <color name="contentOnBackground">#212121</color>
+    <color name="contentOnSurface">#212121</color>
+    <color name="contentOnColor">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="overlay">#b3313031</color>
+    <color name="bgOverlay">#CCFFFFFF</color>
+
+    <color name="ic_launcher_background">#DDDDDD</color>
+</resources>

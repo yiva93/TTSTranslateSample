@@ -1,5 +1,5 @@
 # TTSTranslateSample
-Project to test various patterns, libraries, etc., including TTS and Voice recognition
+Personal project I use as code sample and to test various patterns, libraries, etc., including TTS and Voice recognition
 
 # Architecture and main libraries
 - Kotlin, MVVM, Coroutines

@@ -5,6 +5,7 @@ Personal project I use as code sample and to test various patterns, libraries, e
 - Kotlin, MVVM, Coroutines
 - Room for DB
 - Retrofit2 + OkHttp3
+- [Koin](https://github.com/InsertKoinIO/koin) for injection
 - [Cicerone](https://github.com/terrakok/Cicerone) for navigation
 - [FastAdapter](https://github.com/mikepenz/FastAdapter) for RecyclerView adapters
 - [Lottie](https://github.com/airbnb/lottie-android) for animations
